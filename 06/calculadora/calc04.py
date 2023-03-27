@@ -12,13 +12,17 @@ while True :
       "*" : ("El producto",  "por",   mult ),
       "/" : ("El cociente",  "entre", divi ),
       "%" : ("El remanente", "y",     modu ),
+      "√" : ("La raiz cuadr", "es",   root )
     }
     a=int(input("Ingrese el primer operando: "))
     b=int(input("Ingrese el segundo operando: "))
-    op=(input("Ingrese la operación (+, -, *, / o %): "))
+    op=(input("Ingrese la operación (+, -, *, /, % o √): "))
     if op in oper :
         (nombre, union, func) = oper[op]
-        print("{} de {} {} {} es: {}.".format(nombre,a,union,b,func(a,b)))
+        if op == "√" :
+            print("{} de {} es: {}.".format(nombre,a,func(a)))
+        else :
+            print("{} de {} {} {} es: {}.".format(nombre,a,union,b,func(a,b)))
     else :
         print("Operador inválido. Intente de nuevo más tarde.")
     
