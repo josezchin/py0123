@@ -17,6 +17,3 @@ def divi (a, b) :
     
 def modu (a, b) :
     return a%b
-
-def root (a) :
-    return a**(1/2)
